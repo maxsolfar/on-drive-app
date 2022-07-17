@@ -1,0 +1,126 @@
+.ContainerNavBar{
+  position: fixed;
+  bottom: 0;
+  background-color: var(--dark-color);
+  border-top: 1px solid rgba(222,222,222,.2);
+  width: 100%;
+  height: 60px;
+  z-index: 5;
+}
+
+.Logo{
+  display: none;
+}
+
+.ProfileIcons{
+  display: none;
+}
+
+.ProfileIcons .Avatar{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.NavBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+}
+
+.NavItem{
+  border-radius: 10px;
+  padding: 10px;
+  transition: .9s ease-in-out;
+}
+
+.NavItem:hover, .Active{
+  background-color: var(--accent-color);
+  transition: .7s ease-in-out;
+}
+
+.NavItem img{
+  width: 26px;
+  opacity: .9;
+}
+
+.NavItem a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  color: var(--clear-color);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
+  .NavBar{
+    flex-direction: row;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .ContainerNavBar{
+    left: 0;
+    top: 0;
+    margin: auto 0;
+    width: 70px;
+    height: 70vh;
+    border: none;
+    display: flex;
+    padding: 20px 0;
+    border-radius: 0 15px 15px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .NavBar{
+    flex-direction: column;
+    width: 100%;
+    height: 280px;
+  }
+  .Logo{
+    display: block;
+    width: 50px;
+  }
+  .ProfileIcons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .ProfileIcons a{
+    text-decoration: none;
+    position: relative;
+  }
+  .ProfileIcons .Notifications{
+    width: 30px;
+    
+  }
+  .ProfileIcons .NotificationsNumber{
+    background-color: var(--accent-color);
+    color: var(--clear-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 3px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+  .ProfileIcons .Avatar{
+    width: 50px;
+  }
+
+}

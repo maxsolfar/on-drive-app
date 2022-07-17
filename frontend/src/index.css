@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Raleway:ital,wght@0,400;1,600&display=swap');
+
+* {
+  
+  /* Colors */
+  --primary-color: #fed428;
+  --secondary-color: #00a3fe;
+  --accent-color: #fb8701;
+  --availability-color: #29C82F;
+  --dark-color: #212734;
+  --clear-color: #f1f2f6;
+  --semi-clear-color: #e5e5e5;
+
+  /* Fonts */
+  --font-title-color: #c8c8c8;
+  --font-dark-color: rgba(33, 39, 52, .8);
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(33, 39, 52, .95);
+  width: 100%;
+  height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6,p,span{
+  margin: 0;
+  padding: 0;
+}
+
+
+*::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+  width:15px;
+}
+
+*::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: #252C38;
+}
