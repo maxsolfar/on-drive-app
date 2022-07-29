@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  gap: 15px;
+  gap: 20px;
 }
 
 /* Media queries for mid-size devices (Tablet) */
@@ -16,9 +15,7 @@ and (max-device-width: 1024px) {
 /* Media queries for large-size devices (Laptop & Desktop) */
 @media screen
 and (min-device-width: 1200px) {
-  .ContainerCards{
-    margin-left: 70px;
-  }
+
 }
 
 

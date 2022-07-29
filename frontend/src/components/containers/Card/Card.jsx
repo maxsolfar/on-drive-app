@@ -1,5 +1,9 @@
 import React from 'react';
 import styles from "./Card.module.css";
+import "./card.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
+import { Navigation } from "swiper";
 
 import Button from "../../sections/Button/Button";
 
@@ -12,7 +16,16 @@ const Card = ({origin, destination, price, date, capacity, image, driverName, dr
   return (
     <article className={styles.CardContainer}>
       <section className={styles.CarouselCard}>
-        <img className={styles.ImgCarousel} src={image} alt="card-img-carousel" />
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          {
+            image && image?.map((img, index)=>(
+              <SwiperSlide key={index}>
+                <img className={styles.ImgCarousel} src={img} alt="card-img-carousel" />
+              </SwiperSlide>
+            ))
+          }
+
+        </Swiper>
         <span className={styles.DateCard}>{date}<img src={iconCalendar} alt="alt-calendar-icon" /></span>
         <span className={styles.Availability}>{capacity} Slots Available</span>
       </section> 
@@ -37,7 +50,7 @@ const Card = ({origin, destination, price, date, capacity, image, driverName, dr
         <section className={styles.DriverInformation}>
           <span className={styles.NameDriver}>Driver: <b>{driverName} {driverLastName}</b></span>
           <div className={styles.ReviewContainer}>
-            <div>
+            <div className={styles.StarsContainer}>
               <img className={styles.IconStar} src={iconStar} alt="alt-star-icon" />
               <img className={styles.IconStar} src={iconStar} alt="alt-star-icon" />
               <img className={styles.IconStar} src={iconStar} alt="alt-star-icon" />

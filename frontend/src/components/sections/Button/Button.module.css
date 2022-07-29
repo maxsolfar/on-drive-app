@@ -6,6 +6,14 @@
   width: 80%;
 }
 
+.Medium{
+  width: 60%;
+}
+
+.Small{
+  width: 30%;
+}
+
 .Button{
   width: 100%;
   font-weight: 700;
@@ -38,7 +46,7 @@
 
 .AccentButton{
   background-color: var(--accent-color);
-  color: var(--dark-color);
+  color: var(--clear-color);
   transition: .9s ease-in-out;
 }
 

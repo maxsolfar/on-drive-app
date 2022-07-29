@@ -1,0 +1,70 @@
+.DriversContainer, .DriverInfo, .ReviewContainer, .StarsContainer, .Position{
+  display: flex;
+  align-items: center;
+}
+
+.DriversContainer{
+  gap: 20px;
+  justify-content: center;
+}
+
+.ContainerAvatar{
+  position: relative;
+}
+
+.AvatarImg{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.Position{
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 22px;
+  height: 22px;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+  color: var(--clear-color);
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.DriverInfo{
+  flex-direction: column;
+}
+
+.NameDriver{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #546179;
+}
+
+.ReviewContainer{
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.IconStar{
+  width: 15px;
+}
+
+.ReviewPoints{
+  font-family: "Poppins",sans-gm
+  serif;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  opacity: .8;
+}
+
+.Separator{
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid rgba(84, 97, 121, .1);
+}
+

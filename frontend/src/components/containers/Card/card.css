@@ -1,0 +1,29 @@
+.swiper-button-prev, .swiper-button-next{
+  width:24px;
+  height: 24px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto 0; 
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  opacity: .7;
+  background-color: var(--clear-color);
+  transform: scale(.9);
+}
+
+.swiper-button-prev{
+  background-image: url("../../../assets/Card/icon-left3.png");
+  left: 5px;
+}
+
+.swiper-button-next{
+  background-image: url("../../../assets/Card/icon-right3.png");
+  right: 5px;
+}
+
+.swiper-button-disabled{
+}

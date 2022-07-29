@@ -6,7 +6,8 @@
 .DriverInformation,
 .ReviewContainer,
 .DateCard,
-.DestinationCard{
+.DestinationCard,
+.StarsContainer{
   display: flex;
 }
 
@@ -16,7 +17,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 300px;
-  height: 400px;
+  height: 380px;
   border-radius: 20px;
   overflow: hidden;
   color: var(--dark-color);
@@ -79,7 +80,7 @@
   padding: 10px;
   gap: 5px;
   align-items: center;
-  border: 1px solid var(--semi-clear-color);
+  border-bottom: 1px solid var(--semi-clear-color);
 }
 
 .IconRoad{
@@ -119,7 +120,7 @@
 }
 
 .Price{
-  width: 50%;
+  width: 70%;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: .5rem;
@@ -128,7 +129,7 @@
 }
 
 .TextPrice{
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 600;
   margin-top: -7px;
 }
@@ -193,3 +194,23 @@
   color: var(--dark-color);
   opacity: .8;
 }
+
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
+ 
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .CardContainer{
+    max-width: 280px;
+    height: 370px;
+  }
+
+}
+
+

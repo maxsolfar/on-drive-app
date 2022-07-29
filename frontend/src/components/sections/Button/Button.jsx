@@ -7,6 +7,8 @@ import iconArrowRight from "../../../assets/Buttons/icon-arrow-right.png";
 import iconArrowRightDark from "../../../assets/Buttons/icon-arrow-right-dark.png";
 import iconPin from "../../../assets/Buttons/icon-pin.png";
 import iconPinDark from "../../../assets/Buttons/icon-pin-dark.png";
+import iconRight from "../../../assets/Buttons/icon-right.png";
+import iconRightDark from "../../../assets/Buttons/icon-right-dark.png";
 
 const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
   const buttonType = {
@@ -28,6 +30,8 @@ const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
     arrowRightDark: iconArrowRightDark,
     pin: iconPin,
     pinDark: iconPinDark,
+    right: iconRight,
+    rightDark: iconRightDark,
   };
 
   return (
@@ -40,7 +44,7 @@ const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
           <img
             className={styles.ButtonIcon}
             src={
-              type === "secondary"
+              type === "secondary" || type === "accent"
               ?  icons[icon]
               : icons[`${icon}Dark`]
             }
@@ -52,7 +56,7 @@ const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
           <img
             className={styles.ButtonIcon}
             src={
-              type === "secondary"
+              type === "secondary" || type === "accent"
               ?  icons[icon]
               : icons[`${icon}Dark`]
             }

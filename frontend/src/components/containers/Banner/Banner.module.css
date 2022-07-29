@@ -1,0 +1,88 @@
+.ContainerBanner, .TextContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.ContainerBanner{
+  justify-content: space-between;
+  background-color: var(--dark-color);
+  overflow: hidden;
+}
+
+.ImgBanner{
+  display: none;
+}
+
+.TextContainer{
+  gap: 10px;
+  padding: 20px 40px;
+}
+
+.TextBanner{
+  color: var(--clear-color);
+  font-size: 1.4rem;
+}
+
+.TitleBanner{
+  font-size: 2.2rem;
+  color: var(--accent-color);
+}
+
+.TitleBanner b{
+  font-size: 2.2rem;
+  color: var(--clear-color);
+}
+
+.ButtonContainer{
+  width: 100%;
+}
+
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
+  .ContainerBanner{
+    flex-direction: row;
+  }
+  .ImgBanner{
+    display: block;
+    width: 25%;
+    transform: scaleX(-1);
+  }
+  .ButtonContainer{
+    width: 60%;
+  }
+  
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .ContainerBanner{
+    flex-direction: row;
+    border-radius: 20px;
+  }
+  .ImgBanner{
+    display: block;
+    width: 22%;
+    transform: scaleX(-1);
+  }
+  .ButtonContainer{
+    width: 30%;
+  }
+
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .ImgBanner{
+    display: block;
+    width: 14%;
+    transform: scaleX(-1);
+  }
+  .TextContainer{
+    gap: 15px;
+  }
+}

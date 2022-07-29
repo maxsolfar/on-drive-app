@@ -1,0 +1,31 @@
+.ContainerSlider{
+  width: 300px;
+}
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
+  .ContainerSlider{
+    width: 620px;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .ContainerSlider{
+    width: 880px;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .ContainerSlider{
+    width: 1180px;
+  }
+}
+
+
+
