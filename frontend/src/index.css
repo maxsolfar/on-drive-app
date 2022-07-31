@@ -4,6 +4,7 @@
   
   /* Colors */
   --primary-color: #fed428;
+ /*  --primary-color: #ECE93A; */
   --secondary-color: #00a3fe;
   --accent-color: #fb8701;
   --availability-color: #29C82F;
@@ -26,8 +27,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: rgba(33, 39, 52, .95);
   width: 100%;
-  padding: 20px 0;
-  margin-bottom: 50px;
+  height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6,p,span{

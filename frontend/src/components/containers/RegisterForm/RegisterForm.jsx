@@ -9,7 +9,6 @@ const RegisterForm = () => {
  
   const email = useField({type: "text"});
   const name = useField({type: "text"});
-  const lastName = useField({type: "text"});
   const password = useField({type: "password"});
   const confirmPassword = useField({type: "password"});
 
@@ -19,7 +18,6 @@ const RegisterForm = () => {
     const Submit = {
       email: email.value,
       name: name.value,
-      lastName: lastName.value,
       password: password.value,
       confirmPassword: confirmPassword.value,
     }
@@ -43,14 +41,6 @@ const RegisterForm = () => {
         label={"Name"}
         name={"name"}
         placeholder={"Type your name"}
-      />
-
-      <InputField
-        {...lastName}
-        icon={"user"}
-        label={"LastName"}
-        name={"lastName"}
-        placeholder={"Type your last name"}
       />
 
       <InputField

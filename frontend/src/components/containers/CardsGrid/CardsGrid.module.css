@@ -3,6 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 80px;
 }
 
 /* Media queries for mid-size devices (Tablet) */

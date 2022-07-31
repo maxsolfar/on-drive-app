@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import InputField from '../../sections/InputField/InputField';
 import Button from '../../sections/Button/Button';
 
+
 const LoginForm = () => {
 
   const email = useField({type: "text"});
@@ -24,7 +25,6 @@ const LoginForm = () => {
 
   return (
     <section className={styles.LoginFormContainer}>
-
       <h2 className={styles.TitleLogin}>Sign In</h2>
       <InputField 
         {...email}

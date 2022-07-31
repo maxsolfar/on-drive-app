@@ -5,14 +5,20 @@ import emailIcon from "../../../assets/Forms/email-icon.png";
 import userIcon from "../../../assets/Forms/user-icon.png";
 import passwordIcon from "../../../assets/Forms/password-icon.png";
 import documentIcon from "../../../assets/Forms/document-icon.png";
+import originIcon from "../../../assets/Forms/icon-origin.png";
+import destinationIcon from "../../../assets/Forms/icon-destination.png";
+import calendarIcon from "../../../assets/Forms/icon-calendar.png";
 
-const InputField = ({ icon, value, label, name, placeholder, type, onChange, error  }) => {
+const InputField = ({ icon, value, label, name, placeholder, type, onChange, error, theme }) => {
 
   const icons = {
     email: emailIcon,
     password: passwordIcon,
     user: userIcon,
     document: documentIcon,
+    origin: originIcon,
+    destination: destinationIcon,
+    calendar: calendarIcon,
   };
 
   return (
@@ -21,7 +27,7 @@ const InputField = ({ icon, value, label, name, placeholder, type, onChange, err
       <div className={styles.InputContainer}>
         {icon && <img src={icons[icon]} className={styles.IconInputField} alt="input-icon"/>}
         <input
-          className={styles.InputField}
+          className={theme === "dark" ? styles.InputDark : styles.InputField}
           type={type}
           name={name}
           placeholder={placeholder}

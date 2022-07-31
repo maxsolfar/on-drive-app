@@ -10,7 +10,9 @@
 }
 
 .ImgBanner{
-  display: none;
+  width: 60%;
+  transform: scaleX(-1);
+  align-self: flex-end;
 }
 
 .TextContainer{
@@ -46,9 +48,7 @@ and (max-device-width: 1024px) {
     flex-direction: row;
   }
   .ImgBanner{
-    display: block;
     width: 25%;
-    transform: scaleX(-1);
   }
   .ButtonContainer{
     width: 60%;
@@ -64,12 +64,13 @@ and (min-device-width: 1200px) {
     border-radius: 20px;
   }
   .ImgBanner{
-    display: block;
     width: 22%;
-    transform: scaleX(-1);
   }
   .ButtonContainer{
     width: 30%;
+  }
+  .TextContainer{
+    gap: 15px;
   }
 
 }
@@ -78,11 +79,9 @@ and (min-device-width: 1200px) {
 @media screen
 and (min-device-width: 1600px) {
   .ImgBanner{
-    display: block;
     width: 14%;
-    transform: scaleX(-1);
   }
   .TextContainer{
-    gap: 15px;
+    gap: 20px;
   }
 }

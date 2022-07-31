@@ -1,5 +1,7 @@
 .MainContainer{
   width: 100%;
+  height: 100vh;
+  background: var(--dark-color);
 }
 
 .MainContainer, .ContainerRegister, .ImageContainer{
@@ -10,36 +12,32 @@
 
 .ContainerRegister{
   width: 100%;
+  min-height: 100%;
   height: 100vh;
-  gap: 10px;
 }
 
 
 /* Styles for Container Image */
 .ImageContainer{
-  width: 100%;
-  height: 20%;
-  display: none;
   background-color: var(--clear-color);
+  width: 100%;
+  border-radius: 0 0 0px 80px;
 }
 
 .Image{
-  height: 100%;
+  width: 70%;
 }
 
 .LogoDesktop{
-  width: 50%;
-}
-
-.Logo{
-  width: 50%;
-  margin-top: 15px;
+  display: none;
+  width: 40%;
 }
 
 .Text{
   color: var(--font-title-color);
   font-size: 1.5rem;
   text-align: center;
+  display: none;
 }
 
 
@@ -48,24 +46,36 @@
 @media screen
 and (min-device-width: 768px) 
 and (max-device-width: 1024px) {
-  .ContainerRegister{
+  .MainContainer{
+    background: var(--dark-color);
+  }
+  .ImageContainer{
+    width: 60%;
+    border-radius: 0 0 40px 40px;
+  }
+  .Image{
+    width: 60%;
   }
 }
 
 /* Media queries for large-size devices (Laptop & Desktop) */
 @media screen
 and (min-device-width: 1200px) {
+  .MainContainer{
+    background: var(--dark-color);
+  }
+
   .ContainerRegister{
     flex-direction: row;
     width: 75%;
-    gap: 70px;
+    gap: 50px;
   }
 
   .ImageContainer{
     background: transparent;
     gap: 20px;
     justify-content: center;
-    display: flex;
+    width: 70%;
   }
 
   .LogoDesktop {
@@ -76,7 +86,19 @@ and (min-device-width: 1200px) {
     display: block;
   }
 
-  .Logo{
-    display: none;
+  .Image{
+    width: 60%;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .Image{
+    width: 70%;
+  }
+
+  .ImageContainer{
+    width: 60%;
   }
 }

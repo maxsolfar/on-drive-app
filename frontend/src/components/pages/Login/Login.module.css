@@ -1,5 +1,7 @@
 .MainContainer{
   width: 100%;
+  height: 100vh;
+  background: var(--dark-color);
 }
 
 .MainContainer, .ContainerLogin, .ImageContainer{
@@ -10,29 +12,25 @@
 
 .ContainerLogin{
   width: 100%;
+  min-height: 100%;
   height: 100vh;
-  gap: 10px;
 }
-
 
 /* Styles for Container Image */
 .ImageContainer{
-  width: 100%;
-  height: 20%;
   background-color: var(--clear-color);
+  width: 100%;
+  border-radius: 0 0 0px 80px;
 }
 
+
 .Image{
-  height: 100%;
+  width: 70%;
 }
 
 .LogoDesktop{
   display: none;
-  width: 50%;
-}
-
-.Logo{
-  width: 50%;
+  width: 40%;
 }
 
 .Text{
@@ -47,23 +45,35 @@
 @media screen
 and (min-device-width: 768px) 
 and (max-device-width: 1024px) {
-  .ContainerLogin{
+  .MainContainer{
+    background: var(--dark-color);
+  }
+  .ImageContainer{
+    width: 60%;
+    border-radius: 0 0 40px 40px;
+  }
+  .Image{
+    width: 60%;
   }
 }
 
 /* Media queries for large-size devices (Laptop & Desktop) */
 @media screen
 and (min-device-width: 1200px) {
+  .MainContainer{
+    background: var(--dark-color);
+  }
   .ContainerLogin{
     flex-direction: row;
     width: 75%;
-    gap: 70px;
+    gap: 50px;
   }
 
   .ImageContainer{
     background: transparent;
     gap: 20px;
     justify-content: center;
+    width: 70%;
   }
 
   .LogoDesktop {
@@ -74,7 +84,14 @@ and (min-device-width: 1200px) {
     display: block;
   }
 
-  .Logo{
-    display: none;
+}
+
+
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .ImageContainer{
+    width: 60%;
   }
 }

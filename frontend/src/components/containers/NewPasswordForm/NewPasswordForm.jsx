@@ -5,7 +5,6 @@ import InputField from '../../sections/InputField/InputField';
 import Button from '../../sections/Button/Button';
 
 import { useField } from '../../hooks/useInputField';
-import vectorPassword from "../../../assets/NewPassword/NewPassword.png";
 
 const NewPasswordForm = ({UserEmail}) => {
 
@@ -26,7 +25,6 @@ const NewPasswordForm = ({UserEmail}) => {
     
     <section className={styles.NewPasswordFormContainer}>
       <h2 className={styles.TitleNewPassword}>New Password</h2>
-      <img className={styles.NewPasswordImage} src={vectorPassword} alt="vector-new-password" />
       <div className={styles.UserName}>
         <span>username:</span>
         <span>{UserEmail}</span>

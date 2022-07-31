@@ -44,7 +44,7 @@ const trips = [
     driver: {
       name: "Manuel",
       lastName: "Campos",
-      rating: 3.0,
+      rating: 3.1,
       image: "http://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
     },
   },
@@ -108,7 +108,7 @@ const trips = [
     driver: {
       name: "Manuel",
       lastName: "Campos",
-      rating: 3.0,
+      rating: 3.4,
       image: "http://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
     },
   },
@@ -172,7 +172,7 @@ const trips = [
     driver: {
       name: "Manuel",
       lastName: "Campos",
-      rating: 3.0,
+      rating: 3.7,
       image: "http://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
     },
   },

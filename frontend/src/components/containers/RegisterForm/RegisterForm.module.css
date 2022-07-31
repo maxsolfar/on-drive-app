@@ -1,24 +1,26 @@
 /* General styles for small-size devices (Mobile) */
-
-/* Styles for Main Container */
-.RegisterFormContainer{
+.RegisterFormContainer,
+.DividerText {
   display: flex;
   align-items: center;
+}
+/* Styles for Main Container */
+.RegisterFormContainer{
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: auto;
   gap: 10px;
-  padding: 0 15px;
+  padding: 20px;
+  background: var(--dark-color);
 }
 
 
 /* Styles for Title */
 .TitleRegister{
   color: var(--primary-color);
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 700;
-  margin: 15px 0px;
-  text-decoration: underline;
+  margin: 5px 0px 15px 0px;
 }
 
 
@@ -29,8 +31,6 @@
   color: var(--font-title-color);
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 8px 0;
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -67,8 +67,15 @@
 @media screen
 and (min-device-width: 768px) 
 and (max-device-width: 1024px) {
-  .RegisterFormContainer{
-    width: 65%;
+  .RegisterFormContainer {
+    width: 60%;
+    gap: 15px;
+  }
+  .TitleRegister {
+    font-size: 3rem;
+  }
+  .CheckBox{
+    font-size: 1.4rem;
   }
 }
 
@@ -77,6 +84,25 @@ and (max-device-width: 1024px) {
 and (min-device-width: 1200px) {
   .RegisterFormContainer{
     justify-content: center;
-    width: 100%;
+    width: 80%;
+    gap: 10px;
+  }
+  /* Styles for Title */
+  .TitleRegister {
+    font-size: 3.2rem;
+  }
+  .CheckBox{
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .RegisterFormContainer {
+    justify-content: center;
+    width: 55%;
+    gap: 15px;
   }
 }

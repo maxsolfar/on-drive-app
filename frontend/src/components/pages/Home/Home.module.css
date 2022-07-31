@@ -1,8 +1,10 @@
 .MainContainer,
 .MidContainer,
+.BottomContainer,
 .CarouselContainer,
 .Aside,
-.Drivers {
+.Drivers,
+.Container{
   display: flex;
   flex-direction: column;
 }
@@ -14,54 +16,74 @@
   height: auto;
 }
 .Container{
-  max-width: 1660px;
+  max-width: 1500px;
+  gap: 40px;
 }
 
 .MidContainer {
   width: 100%;
-  
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.BottomContainer{
+  align-items: center;
+  gap: 20px;
 }
 
 .CarouselContainer {
   flex: 0 1 78%;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .TitleCarousel,
-.TitleAside {
+.TitleAside, .TitleWeekend {
   font-size: 2.5rem;
   color: var(--clear-color);
 }
 
 .TitleCarousel b,
-.TitleAside b {
+.TitleAside b, .TitleWeekend b {
   font-size: 2.2rem;
-  color: var(--dark-color);
-  background-color: var(--primary-color);
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+.TitleCarousel b,
+.TitleAside b {
+  color: var(--dark-color);
+  background-color: var(--primary-color);
+}
+
+.TitleWeekend b{
+  color: var(--clear-color);
+  background-color: var(--secondary-color);
 }
 
 .Aside {
   flex: 0 1 22%;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .Drivers {
   background-color: var(--primary-color);
   padding: 20px 20px 5px 20px;
-  width: 100%;
+  width: 300px;
   height: 100%;
   justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
 }
 
 /* Media queries for mid-size devices (Tablet) */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .Aside{
+    display: none;
+  }
 }
 
 /* Media queries for large-size devices (Laptop & Desktop) */
@@ -75,6 +97,9 @@
   .Drivers {
     border-radius: 10px;
   }
+  .Drivers {
+    width: 280px;
+  }
 }
 
 
@@ -86,5 +111,11 @@ and (min-device-width: 1600px) {
   }
   .Aside {
     flex: 0 1 19%;
+  }
+  .MidContainer{
+    padding: 0 10px;
+  }
+  .Drivers {
+    width: 280px;
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import RegisterForm from '../../containers/RegisterForm/RegisterForm';
 
 import styles from "./Register.module.css";
-import logo from "../../../assets/Logo/onDrive-logo.png";
+import logo from "../../../assets/Logo/on-drive-logo.png";
 import imageTop from "../../../assets/Register/vector-register.png";
 
 const Register = () => {
@@ -14,7 +14,7 @@ const Register = () => {
           <img className={styles.LogoDesktop} src={logo} alt="logo-onDrive" />
           <p className={styles.Text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
         </div>
-        <img className={styles.Logo} src={logo} alt="logo-onDrive" />
+        {/* <img className={styles.Logo} src={imageTop} alt="logo-onDrive" /> */}
         <RegisterForm/>
       </section>
     </section>

@@ -2,7 +2,7 @@ import React from 'react';
 import NewPasswordForm from '../../containers/NewPasswordForm/NewPasswordForm';
 
 import styles from "./NewPassword.module.css";
-import logo from "../../../assets/Logo/onDrive-logo.png";
+import logo from "../../../assets/Logo/on-drive-logo.png";
 import imageTop from "../../../assets/NewPassword/NewPassword.png";
 
 const NewPassword = () => {

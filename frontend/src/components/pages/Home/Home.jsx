@@ -1,17 +1,20 @@
 import React from "react";
 import Banner from "../../containers/Banner/Banner";
-/* import CardsGrid from '../../containers/CardsGrid/CardsGrid'; */
+import CardsGrid from '../../containers/CardsGrid/CardsGrid';
 import CarouselTrips from "../../containers/CarouselTrips/CarouselTrips";
-import NavBar from "../../containers/NavBar/NavBar";
+/* import NavBar from "../../containers/NavBar/NavBar"; */
 import DriverAside from "../../sections/DriverAside/DriverAside";
 import styles from "./Home.module.css";
 
 import drivers from "../../sections/DriverAside/data";
+import SearchBar from "../../containers/SearchBar/SearchBar";
+import NewNavBar from "../../containers/NewNavBar/NewNavBar";
 
 const Home = () => {
   return (
     <section className={styles.MainContainer}>
-      <NavBar />
+      <NewNavBar />
+      <SearchBar />
       <main className={styles.Container}>
         <section className={styles.MidContainer}>
           <div className={styles.CarouselContainer}>
@@ -40,8 +43,12 @@ const Home = () => {
             </section>
           </aside>
         </section>
-
-        {/* <CardsGrid/> */}
+        <section className={styles.BottomContainer}>
+          <h2 className={styles.TitleWeekend}>
+              Top <b>Trips</b> for the Weekend
+          </h2>
+          <CardsGrid/>
+        </section>
       </main>
     </section>
   );

@@ -38,7 +38,7 @@ const drivers = [
   {
     name: "Rafael",
     lastName: "Rodriguez",
-    rating: 5.0,
+    rating: 4.9,
     image: "https://themusclemedics.com/wp-content/uploads/2018/04/Circle-Profile-PNG.png"
   },
   {

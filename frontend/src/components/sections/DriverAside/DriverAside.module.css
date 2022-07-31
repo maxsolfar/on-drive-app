@@ -4,8 +4,9 @@
 }
 
 .DriversContainer{
-  gap: 20px;
-  justify-content: center;
+  gap: 10px;
+  justify-content: space-between;
+  width: 85%;
 }
 
 .ContainerAvatar{
@@ -27,7 +28,7 @@
   line-height: 1.3rem;
   font-weight: 700;
   color: var(--clear-color);
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
   border-radius: 50%;
   justify-content: center;
 }
@@ -66,5 +67,29 @@
   width: 100%;
   margin: 10px 0;
   border: 1px solid rgba(84, 97, 121, .1);
+}
+
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .DriversContainer{
+    width: 85%;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen and (min-device-width: 1200px) {
+  .DriversContainer{
+    width: 96%;
+  }
+}
+
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .DriversContainer{
+    width: 90%;
+  }
 }
 

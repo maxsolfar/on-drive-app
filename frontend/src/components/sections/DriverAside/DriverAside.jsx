@@ -9,7 +9,6 @@ const DriverAside = ({driverName, driverLastName, driverImage, driverRating, pos
     <>
     <article className={styles.DriversContainer}>
 
-
       <div className={styles.ContainerAvatar}>
         <img className={styles.AvatarImg} src={driverImage} alt="alt-img-avatar" />
         <span className={styles.Position}>{position}</span>
