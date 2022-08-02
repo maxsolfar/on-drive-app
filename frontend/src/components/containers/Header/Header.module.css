@@ -1,0 +1,33 @@
+.HeaderContainer{
+  width: 100%;
+  height: 260px;
+/*   background-image: url("https://images.pexels.com/photos/13861/IMG_3496bfree.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: var(--secondary-color);
+  margin-bottom: 30px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.HeaderImg{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.TitleHeader{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clear-color);
+}
+
+.SubtitleHeader{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}

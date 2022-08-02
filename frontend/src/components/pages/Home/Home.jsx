@@ -9,12 +9,14 @@ import styles from "./Home.module.css";
 import drivers from "../../sections/DriverAside/data";
 import SearchBar from "../../containers/SearchBar/SearchBar";
 import NewNavBar from "../../containers/NewNavBar/NewNavBar";
+import Header from "../../containers/Header/Header";
 
 const Home = () => {
   return (
     <section className={styles.MainContainer}>
       <NewNavBar />
       <SearchBar />
+      <Header />
       <main className={styles.Container}>
         <section className={styles.MidContainer}>
           <div className={styles.CarouselContainer}>

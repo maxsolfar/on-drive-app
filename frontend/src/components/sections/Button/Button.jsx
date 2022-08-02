@@ -9,6 +9,7 @@ import iconPin from "../../../assets/Buttons/icon-pin.png";
 import iconPinDark from "../../../assets/Buttons/icon-pin-dark.png";
 import iconRight from "../../../assets/Buttons/icon-right.png";
 import iconRightDark from "../../../assets/Buttons/icon-right-dark.png";
+import iconSend from "../../../assets/Buttons/icon-send.png";
 
 const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
   const buttonType = {
@@ -32,6 +33,7 @@ const Button = ({ title, type, size, width, onClick, icon, iconPosition }) => {
     pinDark: iconPinDark,
     right: iconRight,
     rightDark: iconRightDark,
+    sendDark: iconSend,
   };
 
   return (

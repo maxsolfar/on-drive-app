@@ -10,7 +10,9 @@ import shortLogo from "../../../assets/Logo/on.png";
 import notifications from "../../../assets/NavBar/icon-bell.png";
 import avatarImg from "../../../assets/Card/avatar-img.jpg";
 
+
 const NewNavBar = () => {
+
   return (
     <nav className={styles.ContainerNavBar}>
       <img src={shortLogo} className={styles.Logo} alt="logo-on-drive" />
@@ -23,6 +25,8 @@ const NewNavBar = () => {
         <Link to={"/"}><img className={styles.Notifications} src={notifications} alt="icon-notification-img" /><span className={styles.NotificationsNumber}>3</span></Link>
         <Link to={"/profile"}><img className={styles.Avatar} src={avatarImg} alt="avatar-img" /></Link>
       </section>
+
+
     </nav>
   )
 }
