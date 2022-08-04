@@ -100,6 +100,11 @@
   .Drivers {
     width: 280px;
   }
+  .ContainerHeader{
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }
 
 
@@ -117,5 +122,8 @@ and (min-device-width: 1600px) {
   }
   .Drivers {
     width: 280px;
+  }
+  .ContainerHeader{
+    margin: 10px;
   }
 }

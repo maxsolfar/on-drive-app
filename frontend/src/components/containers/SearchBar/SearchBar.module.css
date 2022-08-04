@@ -1,10 +1,6 @@
 
 .SearchBarContainer,
-.ContainerImg,
-.InputsContainer,
-.ChangeIcon,
-.ContainerSearchInputs,
-.Inputs {
+.ContainerImg {
   display: flex;
   align-items: center;
 }
@@ -25,30 +21,6 @@
 .Vector {
   width: 30%;
 }
-
-.TitleSearch {
-  font-size: 1.8rem;
-  color: var(--clear-color);
-}
-
-.TitleSearch b {
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-.InputsContainer {
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  height: 240px;
-  padding: 20px;
-  position: relative;
-}
-
-.SearchBottom {
-  width: 100%;
-}
-
 
 .TopBar{
   position: fixed;
@@ -71,10 +43,11 @@
   position: fixed;  
   box-shadow: 5px 5px 2px 0px rgba(14,16,28,15%);
   z-index: 22;
+  height: 260px;
 }
 
 .SearchBar{
-  top: -240px;
+  top: -260px;
   animation: toggleDown 1.2s ease-in-out;
 }
 
@@ -85,11 +58,11 @@
 
 @keyframes toggleDown {
     0%{ top:50px; }
-    100%{ top:-240px; }
+    100%{ top:-260px; }
 }
 
 @keyframes toggleUp {
-    0%{ top:-240px; }
+    0%{ top:-260px; }
     100%{ top:50px; }
 }
 
@@ -113,30 +86,31 @@
 }
 
 
-.ChangeIcon{
-  justify-content: center;
-  width: 38px;
-  height: 100%;
-  padding: 3px;
-  border-radius: 5px;
-  background-color: rgb(241 242 246 / 100%);
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
 }
 
-.ChangeIcon img{
-  width: 100%;
-  opacity: .95;
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .SearchBarContainer{
+    display: none;
+  }
+  .TopBar{
+    display: none;
+  }
 }
 
 
-.ContainerSearchInputs{
-  flex-direction: row-reverse;
-  width: 100%;
-  justify-content: center;
-  gap: 8px;
-}
-
-.Inputs{
-  flex-direction: column;
-  width: 100%;
-  gap: 8px;
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .SearchBarContainer{
+    display: none;
+  }
+  .TopBar{
+    display: none;
+  }
 }

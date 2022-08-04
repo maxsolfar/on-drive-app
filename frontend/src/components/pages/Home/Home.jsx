@@ -16,8 +16,11 @@ const Home = () => {
     <section className={styles.MainContainer}>
       <NewNavBar />
       <SearchBar />
-      <Header />
+      
       <main className={styles.Container}>
+        <div className={styles.ContainerHeader}>
+          <Header />
+        </div>
         <section className={styles.MidContainer}>
           <div className={styles.CarouselContainer}>
             <h2 className={styles.TitleCarousel}>

@@ -5,8 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover; */
   background-color: var(--secondary-color);
-  margin-bottom: 30px;
-  padding-top: 40px;
+  padding: 30px 0px 0px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -15,9 +14,18 @@
 }
 
 .HeaderImg{
-  width: 100%;
+  width: 65%;
   position: absolute;
   bottom: 0;
+}
+
+.Background{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  background-image: url("../../../assets/Header/background-vector.png");
+  background-size: cover;
 }
 
 .TitleHeader{
@@ -30,4 +38,106 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--dark-color);
+}
+
+.SearchBarContainer{
+  display: none;
+}
+
+.TextContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Media queries for mid-size devices (Tablet) */
+@media screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
+  .HeaderImg{
+    width: 30%;
+  }
+  .TitleHeader{
+    font-size: 3.1rem;
+  }
+  
+  .SubtitleHeader{
+    font-size: 1.8rem;
+  }
+
+  .HeaderContainer{
+    padding-top: 20px;
+  }
+}
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1200px) {
+  .HeaderImg{
+    width: 30%;
+    right: 0;
+  }
+  .Background{
+    background-size: contain;
+    opacity: .3;
+  }
+  .HeaderContainer{
+    padding: 20px 0px 0px 0px;
+    gap: 30px;
+  }
+  .TitleHeader{
+    font-size: 3rem;
+  }
+  .SubtitleHeader{
+    font-size: 1.8rem;
+  }
+  .SearchBarContainer{
+    display: flex;
+    align-self: flex-start;
+    z-index: 1;
+    width: 80%;
+    padding-left: 20px;
+  }
+  .TextContainer{
+    align-items: flex-start;
+    padding: 0 40px;
+  }
+  
+}
+
+
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .HeaderImg{
+    width: 25%;
+    right: 0;
+  }
+  .HeaderContainer{
+    gap: 30px;
+  }
+  .Background{
+    background-size: contain;
+    opacity: .3;
+  }
+  .TitleHeader{
+    font-size: 3rem;
+  }
+  .SubtitleHeader{
+    font-size: 1.8rem;
+  }
+  .SearchBarContainer{
+    display: flex;
+    align-self: flex-start;
+    z-index: 1;
+    width: 80%;
+    padding-left: 20px;
+  }
+  .TextContainer{
+    align-items: flex-start;
+    padding: 0 40px;
+  }
 }

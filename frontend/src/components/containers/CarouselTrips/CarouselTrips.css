@@ -8,7 +8,8 @@
 
 .swiper-pagination-bullet{
   width: 20px;
-  height: 3px;
+  height: 5px;
+  border-radius: 3px;
   margin-top: 20px;
   background-color: aliceblue;
   transition: .9s ease-in-out;

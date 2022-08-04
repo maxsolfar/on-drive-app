@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
 
-import InputField from "../../sections/InputField/InputField";
-import Button from "../../sections/Button/Button";
-import { useField } from "../../hooks/useInputField";
 import Logo from "../../../assets/Logo/on-drive-logo.png";
 
-import changeIcon from "../../../assets/SearchBar/icon-change-dark.png";
+import SearchBarHome from "../../sections/SearchBarHome/SearchBarHome";
 
 const SearchBar = () => {
-  const origin = useField({ type: "text" });
-  const destination = useField({ type: "text" });
 
   const [openToggle, setOpenToggle] = useState(false);
 
@@ -38,43 +33,8 @@ const SearchBar = () => {
             !openToggle ? `${styles.SearchBar}` : `${styles.SearchBarClose}`
           }
         >
-          <section className={styles.InputsContainer}>
-            <h2 className={styles.TitleSearch}>
-              Search your <b>Trip</b>
-            </h2>
-            <div className={styles.ContainerSearchInputs}>
-              <div className={styles.Inputs}>
-                <InputField
-                  {...origin}
-                  icon={"origin"}
-                  name={"origin"}
-                  placeholder={"Your location"}
-                  theme={"dark"}
-                />
-                <InputField
-                  {...destination}
-                  icon={"destination"}
-                  name={"destination"}
-                  placeholder={"Your destination"}
-                  theme={"dark"}
-                />
-              </div>
-              <div className={styles.ChangeIcon}>
-                <img src={changeIcon} alt="img-change-inputs" />
-              </div>
-            </div>
-            
-            <div className={styles.SearchBottom}>
-              <Button
-                title={"Search"}
-                type={"primary"}
-                size={"md"}
-                width={"Full"}
-                icon={"send"}
-                iconPosition={"left"}
-              />
-            </div>
-          </section>
+          <SearchBarHome styleBar={"vertical"}/>
+          
         </section>
       </section>
     </>
