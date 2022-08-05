@@ -1,4 +1,4 @@
-.ContainerNavBar{
+.ContainerNavBar {
   position: fixed;
   bottom: 0;
   background-color: var(--dark-color);
@@ -6,23 +6,22 @@
   height: 50px;
 
   z-index: 10;
-  box-shadow: 0px 0px 8px 5px rgba(6,6,6,0.35);
+  box-shadow: 0px 0px 8px 5px rgba(6, 6, 6, 0.35);
 }
 
-.Logo{
+.Logo {
   display: none;
 }
 
-.ProfileIcons{
+.ProfileIcons {
   display: none;
 }
 
-.ProfileIcons .Avatar{
-  width: 50px;
+.ProfileIcons .Avatar {
   border-radius: 50%;
 }
 
-.NavBar{
+.NavBar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -31,19 +30,19 @@
   padding: 0;
 }
 
-.NavItem{
+.NavItem {
   padding: 10px;
-  transition: .9s ease-in-out;
+  transition: 0.9s ease-in-out;
   border-radius: 50%;
 }
 
-.NavItem:nth-child(2){
+.NavItem:nth-child(6) {
   transform: translateY(-20px);
   background-color: var(--secondary-color);
   border: 2px solid var(--secondary-color);
   border-radius: 50%;
   padding: 11px;
-} 
+}
 
 /* .NavItem:hover, .Active{
   transform: translateY(-20px);
@@ -51,13 +50,13 @@
   transition: .7s ease-in-out;
 } */
 
-
-.NavItem img{
+.NavItem img {
   width: 28px;
-  opacity: .9;
+  height: 28px;
+  opacity: 0.9;
 }
 
-.NavItem a{
+.NavItem a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,21 +66,20 @@
   text-decoration: none;
 }
 
-
+.DesktopMenu {
+  display: none;
+}
 
 /* Media queries for mid-size devices (Tablet) */
-@media screen
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) {
-  .NavBar{
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .NavBar {
     flex-direction: row;
   }
 }
 
 /* Media queries for large-size devices (Laptop & Desktop) */
-@media screen
-and (min-device-width: 1200px) {
-  .ContainerNavBar{
+@media screen and (min-device-width: 1200px) {
+  .ContainerNavBar {
     left: 0;
     top: 0;
     margin: auto 0;
@@ -95,31 +93,30 @@ and (min-device-width: 1200px) {
     justify-content: space-between;
     align-items: center;
   }
-  .NavBar{
+  .NavBar {
     flex-direction: column;
     width: 100%;
-    height: 280px;
+    height: 260px;
   }
-  .Logo{
+  .Logo {
     display: block;
     width: 50px;
   }
-  .ProfileIcons{
+  .ProfileIcons {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
   }
-  .ProfileIcons a{
+  .ProfileIcons a {
     text-decoration: none;
     position: relative;
   }
-  .ProfileIcons .Notifications{
+  .ProfileIcons .Notifications {
     width: 30px;
-    
   }
-  .ProfileIcons .NotificationsNumber{
+  .ProfileIcons .NotificationsNumber {
     background-color: var(--accent-color);
     color: var(--clear-color);
     font-size: 1rem;
@@ -130,21 +127,41 @@ and (min-device-width: 1200px) {
     top: -10px;
     right: 10px;
   }
-  .ProfileIcons .Avatar{
+  .ProfileIcons .Avatar {
     width: 50px;
   }
 
-  .NavItem:hover, .Active{
-    transform: translateX(35px);
+  .NavItem:hover,
+  .Active {
     background-color: var(--secondary-color);
-    transition: .7s ease-in-out;
+    transition: 0.7s ease-in-out;
   }
 
+  .NavItem:nth-child(2) {
+    transform: translateY(0px);
+  }
+  .MobileMenu {
+    display: none;
+  }
+  .DesktopMenu {
+    display: flex;
+  }
 
-  
+  .NavItem img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 
-
-
-
+/* Media queries for large-size devices (Laptop & Desktop) */
+@media screen
+and (min-device-width: 1600px) {
+  .NavItem img {
+    width: 28px;
+    height: 28px;
+  }
+  .NavBar{
+    height: 350px;
+  }
+}
