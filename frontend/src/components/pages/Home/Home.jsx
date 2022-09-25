@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../../containers/Banner/Banner";
 import CardsGrid from '../../containers/CardsGrid/CardsGrid';
 import CarouselTrips from "../../containers/CarouselTrips/CarouselTrips";
+import Loader from "../../sections/Loader/Loader";
 /* import NavBar from "../../containers/NavBar/NavBar"; */
 import DriverAside from "../../sections/DriverAside/DriverAside";
 import styles from "./Home.module.css";
@@ -10,9 +11,20 @@ import drivers from "../../sections/DriverAside/data";
 import SearchBar from "../../containers/SearchBar/SearchBar";
 import NewNavBar from "../../containers/NewNavBar/NewNavBar";
 import Header from "../../containers/Header/Header";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false);
+    }, 3500)
+  },[])
   return (
+    <>
+    {loading ? <Loader/> :
     <section className={styles.MainContainer}>
       <NewNavBar />
       <SearchBar />
@@ -55,7 +67,8 @@ const Home = () => {
           <CardsGrid/>
         </section>
       </main>
-    </section>
+    </section>}
+    </>
   );
 };
 

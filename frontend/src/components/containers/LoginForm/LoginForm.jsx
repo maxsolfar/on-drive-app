@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./LoginForm.module.css";
 import { useField } from '../../hooks/useInputField';
-
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import InputField from '../../sections/InputField/InputField';
@@ -9,7 +9,7 @@ import Button from '../../sections/Button/Button';
 
 
 const LoginForm = () => {
-
+  const navigate = useNavigate();
   const email = useField({type: "text"});
   const password = useField({type: "password"});
   
@@ -20,6 +20,7 @@ const LoginForm = () => {
       email: email.value,
       password: password.value 
     }
+    navigate("/");
     console.log(Submit);
   }
 
